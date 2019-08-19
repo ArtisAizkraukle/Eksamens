@@ -7,9 +7,9 @@
     <form method="post" action="/Home/Buy">
     
         <h2>Kurss</h2>
-        <input type="radio" name="name" value="1" onclick="getInputRadioValue()"><span class="pl-1 pr-2">1</span>
-        <input type="radio" name="name" value="2" onclick="getInputRadioValue()"><span class="pl-1 pr-2">2</span>
-        <input type="radio" name="name" value="3" onclick="getInputRadioValue()"><span class="pl-1 pr-2">3</span>
+        <input type="radio" name="name" value="1" onclick="getInputFromRadio()"><span class="pl-1 pr-2">1</span>
+        <input type="radio" name="name" value="2" onclick="getInputFromRadio()"><span class="pl-1 pr-2">2</span>
+        <input type="radio" name="name" value="3" onclick="getInputFromRadio()"><span class="pl-1 pr-2">3</span>
 
         <h2>Studiju programma</h2>
         <div>
@@ -54,7 +54,7 @@
             alert("Hello, Žeņa!");
         }
 
-        function getInputRadioValue() {
+        function getInputFromRadio() {
             var radios = document.getElementsByName('name');
 
             for (var i = 0, length = radios.length; i < length; i++) {
