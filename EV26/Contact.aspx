@@ -7,9 +7,9 @@
     <form method="post" action="/Home/Buy">
     
         <h2>Kurss</h2>
-        <input type="radio" name="name" value="1" ondurationchange="funcID1()"><span class="pl-1 pr-2">1</span>
-        <input type="radio" name="name" value="2"><span class="pl-1 pr-2">2</span>
-        <input type="radio" name="name" value="3"><span class="pl-1 pr-2">3</span>
+        <input type="radio" name="name" value="1" onclick="getInputRadioValue()"><span class="pl-1 pr-2">1</span>
+        <input type="radio" name="name" value="2" onclick="getInputRadioValue()"><span class="pl-1 pr-2">2</span>
+        <input type="radio" name="name" value="3" onclick="getInputRadioValue()"><span class="pl-1 pr-2">3</span>
 
         <h2>Studiju programma</h2>
         <div>
@@ -47,5 +47,25 @@
             <td class="pl-2">Viss ir labi!</td>
         </tr>
     </table>
-    
+   
+    <script type="text/javascript">
+        function getInputData() {
+            document.getElementById
+            alert("Hello, Žeņa!");
+        }
+
+        function getInputRadioValue() {
+            var radios = document.getElementsByName('name');
+
+            for (var i = 0, length = radios.length; i < length; i++) {
+                if (radios[i].checked) {
+                    // do whatever you want with the checked radio
+                    alert(radios[i].value);
+
+                    // only one radio can be logically checked, don't check the rest
+                    break;
+                }
+            }
+        }
+    </script>
 </asp:Content>
