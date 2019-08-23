@@ -7,24 +7,25 @@
     <form method="post" action="/Home/Buy">
     
         <h2>Kurss</h2>
-        <input type="radio" name="radio" value="1" onclick="getInputFromRadio()"><span class="pl-1 pr-2">1</span>
+        <input type="radio" name="radio" value="1" onclick="getInputFromRadio()" checked="checked"><span class="pl-1 pr-2">1</span>
         <input type="radio" name="radio" value="2" onclick="getInputFromRadio()"><span class="pl-1 pr-2">2</span>
         <input type="radio" name="radio" value="3" onclick="getInputFromRadio()"><span class="pl-1 pr-2">3</span>
 
         <h2>Studiju programma</h2>
         <div>
-            <select class="w-100" name="d">
+            <select class="w-100" name="d" id="studies" oninput="getInputFromSelectedOption()">
                 <option value="IT">IT</option>
                 <option value="LSP">LSP</option>
             </select>
         </div>
 
         <h2>Vārds</h2>
-        <input id="name" class="w-100" type="text" name="Vards" onkeydown="getInputFromTextField(this)"/>
+        <input class="w-100" type="text" name="Vards" id="name" onkeydown="getInputFromTextField(this)" value="Jānis Ozols"/>
 
         <h2>Komentārs</h2>
-        <textarea class="w-100" id="coment" onkeydown="getInputFromTextField(this)"></textarea>
-        <!--input type="submit" value="Sūtīt" /-->
+        <textarea class="w-100" id="coment" onkeydown="getInputFromTextField(this)">Ne viss ir labi, ne viss arī slikti...</textarea>
+        <br />
+        <input type="submit" value="Sūtīt">
     </form>
 
     <h1>Rezultāts</h1>
@@ -32,38 +33,43 @@
     <table>
         <tr>
             <td>Kurss:</td>
-            <td id="demo" class="pl-2"><span id="v2"></span></td>
+            <td class="pl-2" id="course-out">1</td>
         </tr>
         <tr>
             <td>Studiju programma</td>
-            <td class="pl-2">IT</td>
+            <td class="pl-2" id="studies-out">IT</td>
         </tr>
         <tr>
             <td>Vārds</td>
-            <td class="pl-2" id="name-out">Jānis</td>
+            <td class="pl-2" id="name-out">Jānis Ozols</td>
         </tr>
         <tr>
             <td>Komentārs</td>
-            <td class="pl-2" id="coment-out">Viss ir labi!</td>
+            <td class="pl-2" id="coment-out">Ne viss ir labi, ne viss arī slikti...</td>
         </tr>
     </table>
    
     <script type="text/javascript">
 
-        var idInput, n, idOutput, e2;
+        var n, e;
+
         function getInputFromTextField(element) {
-            idInput = document.getElementById(element.id).value;
-            n = document.getElementById(element.id).value; // get data from input
-            e2 = (element.id) + "-out";
-            document.getElementById(e2).innerHTML = n; // do outputsa
+            n = document.getElementById(element.id).value; // get value
+            e = (element.id) + "-out";
+            document.getElementById(e).innerHTML = n; 
+        }
+
+        function getInputFromSelectedOption() {
+            e = document.getElementById("studies");
+            n = e.options[e.selectedIndex].text;
+            document.getElementById('studies-out').innerHTML = n; // write output
         }
 
         function getInputFromRadio() {
             var radios = document.getElementsByName('radio');
-
             for (var i = 0, length = radios.length; i < length; i++) {
                 if (radios[i].checked) {
-                    document.getElementById('v2').innerHTML = radios[i].value // здесь мы меняем данные, которые ввёл пользователь (Kurss: 1)
+                    document.getElementById('course-out').innerHTML = radios[i].value // здесь мы меняем данные, которые ввёл пользователь (Kurss: 1)
                     break;
                 }
             }
