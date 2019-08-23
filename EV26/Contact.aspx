@@ -20,11 +20,11 @@
         </div>
 
         <h2>Vārds</h2>
-        <input id="pr" class="w-100" type="text" name="Vards" onkeydown="getInputFromTextField(this)"/>
+        <input id="name" class="w-100" type="text" name="Vards" onkeydown="getInputFromTextField(this)"/>
 
         <h2>Komentārs</h2>
-        <textarea class="w-100"></textarea>
-        <input type="submit" value="Sūtīt" />
+        <textarea class="w-100" id="coment" onkeydown="getInputFromTextField(this)"></textarea>
+        <!--input type="submit" value="Sūtīt" /-->
     </form>
 
     <h1>Rezultāts</h1>
@@ -40,22 +40,22 @@
         </tr>
         <tr>
             <td>Vārds</td>
-            <td class="pl-2" id="janis">Jānis</td>
+            <td class="pl-2" id="name-out">Jānis</td>
         </tr>
         <tr>
             <td>Komentārs</td>
-            <td class="pl-2">Viss ir labi!</td>
+            <td class="pl-2" id="coment-out">Viss ir labi!</td>
         </tr>
     </table>
    
     <script type="text/javascript">
 
-        var idInput, n, idOutput;
+        var idInput, n, idOutput, e2;
         function getInputFromTextField(element) {
             idInput = document.getElementById(element.id).value;
             n = document.getElementById(element.id).value; // get data from input
-            document.getElementById('janis').innerHTML = n; // do outputsa
-            //alert(idInput);
+            e2 = (element.id) + "-out";
+            document.getElementById(e2).innerHTML = n; // do outputsa
         }
 
         function getInputFromRadio() {
@@ -63,12 +63,8 @@
 
             for (var i = 0, length = radios.length; i < length; i++) {
                 if (radios[i].checked) {
-                    // do whatever you want with the checked radio
-                    //alert(radios[i].value);
                     document.getElementById('v2').innerHTML = radios[i].value // здесь мы меняем данные, которые ввёл пользователь (Kurss: 1)
-                    // only one radio can be logically checked, don't check the rest
                     break;
-
                 }
             }
         }
