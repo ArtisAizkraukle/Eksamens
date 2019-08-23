@@ -20,10 +20,10 @@
         </div>
 
         <h2>Vārds</h2>
-        <input class="w-100" type="text" name="Vards" id="name" onkeydown="getInputFromTextField(this)" value="Jānis Ozols"/>
+        <input class="w-100" type="text" name="Vards" id="name" onkeydown="getInputFromTextField(this)" value="Jevgenijs Struņevskis"/>
 
         <h2>Komentārs</h2>
-        <textarea class="w-100" id="coment" onkeydown="getInputFromTextField(this)">Ne viss ir labi, ne viss arī slikti...</textarea>
+        <textarea class="w-100" id="coment" onkeydown="getInputFromTextField(this)">Mācāmies lietot ASP.NET tehnoloģijas...</textarea>
         <br />
         <input type="submit" value="Sūtīt">
     </form>
@@ -41,11 +41,11 @@
         </tr>
         <tr>
             <td>Vārds</td>
-            <td class="pl-2" id="name-out">Jānis Ozols</td>
+            <td class="pl-2" id="name-out">Jevgenijs Struņevskis</td>
         </tr>
         <tr>
             <td>Komentārs</td>
-            <td class="pl-2" id="coment-out">Ne viss ir labi, ne viss arī slikti...</td>
+            <td class="pl-2" id="coment-out">Mācāmies lietot ASP.NET tehnoloģijas...</td>
         </tr>
     </table>
    
