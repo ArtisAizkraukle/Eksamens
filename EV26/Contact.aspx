@@ -7,9 +7,9 @@
     <form method="post" action="/Home/Buy">
     
         <h2>Kurss</h2>
-        <input type="radio" name="name" value="1" onclick="getInputFromRadio()"><span class="pl-1 pr-2">1</span>
-        <input type="radio" name="name" value="2" onclick="getInputFromRadio()"><span class="pl-1 pr-2">2</span>
-        <input type="radio" name="name" value="3" onclick="getInputFromRadio()"><span class="pl-1 pr-2">3</span>
+        <input type="radio" name="radio" value="1" onclick="getInputFromRadio()"><span class="pl-1 pr-2">1</span>
+        <input type="radio" name="radio" value="2" onclick="getInputFromRadio()"><span class="pl-1 pr-2">2</span>
+        <input type="radio" name="radio" value="3" onclick="getInputFromRadio()"><span class="pl-1 pr-2">3</span>
 
         <h2>Studiju programma</h2>
         <div>
@@ -20,7 +20,7 @@
         </div>
 
         <h2>Vārds</h2>
-        <input id="pr" class="w-100" type="text" name="Vards" oninput="ff()" />
+        <input id="pr" class="w-100" type="text" name="Vards" onkeydown="getInputFromTextField(this)"/>
 
         <h2>Komentārs</h2>
         <textarea class="w-100"></textarea>
@@ -31,7 +31,7 @@
 
     <table>
         <tr>
-            <td>Kurss</td>
+            <td>Kurss:</td>
             <td id="demo" class="pl-2"><span id="v2"></span></td>
         </tr>
         <tr>
@@ -40,7 +40,7 @@
         </tr>
         <tr>
             <td>Vārds</td>
-            <td class="pl-2">Jānis</td>
+            <td class="pl-2" id="janis">Jānis</td>
         </tr>
         <tr>
             <td>Komentārs</td>
@@ -49,21 +49,26 @@
     </table>
    
     <script type="text/javascript">
-        function getInputData() {
-            document.getElementById
-            alert("Hello, Žeņa!");
+
+        var idInput, n, idOutput;
+        function getInputFromTextField(element) {
+            idInput = document.getElementById(element.id).value;
+            n = document.getElementById(element.id).value; // get data from input
+            document.getElementById('janis').innerHTML = n; // do outputsa
+            //alert(idInput);
         }
 
         function getInputFromRadio() {
-            var radios = document.getElementsByName('name');
+            var radios = document.getElementsByName('radio');
 
             for (var i = 0, length = radios.length; i < length; i++) {
                 if (radios[i].checked) {
                     // do whatever you want with the checked radio
-                    alert(radios[i].value);
-
+                    //alert(radios[i].value);
+                    document.getElementById('v2').innerHTML = radios[i].value // здесь мы меняем данные, которые ввёл пользователь (Kurss: 1)
                     // only one radio can be logically checked, don't check the rest
                     break;
+
                 }
             }
         }
