@@ -4,7 +4,9 @@
 
     <img src="pic/siva-logo.png" alt="SIVA logotips">
 
-    <div class="row">
+    <div class="container d-flex justify-content-center">
+        <h1>Eksāmens tīmekļa tehnoloģijās</h1>
+        <div class="row">
         <div class="col-md-4">
             <p>
                 ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
@@ -30,6 +32,7 @@
                 NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
             </p>
         </div>
+    </div>
     </div>
 
 </asp:Content>
