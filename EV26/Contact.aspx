@@ -7,7 +7,7 @@
     <form method="post" action="/Home/Buy">
     
         <h2>Kurss</h2>
-        <input type="radio" name="radio" value="1" onclick="getInputFromRadio()" checked="checked"><span class="pl-1 pr-2">1</span>
+        <input type="radio" name="radio" value="1" onclick="getInputFromRadio()"><span class="pl-1 pr-2">1</span>
         <input type="radio" name="radio" value="2" onclick="getInputFromRadio()"><span class="pl-1 pr-2">2</span>
         <input type="radio" name="radio" value="3" onclick="getInputFromRadio()"><span class="pl-1 pr-2">3</span>
 
