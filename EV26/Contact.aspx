@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="EV26.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <header><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></header>
 
     <h1>Aptauja</h1>
     
@@ -31,13 +32,13 @@
     <h1>Rezultāts</h1>
 
     <table>
-        <tr>
+        <tr class="mr-3">
             <td>Kurss:</td>
-            <td class="pl-2" id="course-out">null</td>
+            <td class="mr-3" id="course-out">null</td>
         </tr>
-        <tr>
+        <tr class="mr-3 ml-3">
             <td>Studiju programma</td>
-            <td class="pl-2" id="studies-out">null</td>
+            <td id="studies-out">null</td>
         </tr>
         <tr>
             <td>Vārds</td>
