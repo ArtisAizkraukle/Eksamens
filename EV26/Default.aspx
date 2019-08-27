@@ -10,7 +10,7 @@
 
 <table>
     <tr>
-        <th class="font-weight-light align-top w-50">
+        <th class="font-weight-light align-top w-50 mr-3">
             Teksts ir mutvārdos izteikts vai rakstveidā fiksēts loģiski strukturēts, funkcionāli vienots jēdzeniski saistītu izteikumu kopums vai atsevišķs izteikums. [1] Literatūrā teksts ir jebkurš objekts, ko var "lasīt", vai šis objekts ir literārais darbs, ielas apzīmējums, ēku izvietojums pilsētas blokā vai apģērbu stils.Tas ir saskaņots zīmju kopums, kas pārraida kādu informatīvu vēstījumu. [2] Šis simbolu komplekts tiek uzskatīts par informatīva ziņojuma saturu, nevis tā fizisko formu vai veidu, kurā tas ir attēlots.
         </th>
         <th class="font-weight-light align-top w-50">
