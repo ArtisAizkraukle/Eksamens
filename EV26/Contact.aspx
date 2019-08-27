@@ -13,17 +13,17 @@
 
         <h2>Studiju programma</h2>
         <div>
-            <select class="w-100" name="d" id="studies" oninput="getInputFromSelectedOption()">
+            <select class="w-100" name="d" id="studies" onclick="getInputFromSelectedOption()">
                 <option value="IT">IT</option>
                 <option value="LSP">LSP</option>
             </select>
         </div>
 
         <h2>Vārds</h2>
-        <input class="w-100" type="text" name="Vards" id="name" onkeydown="getInputFromTextField(this)" value="Jevgenijs Struņevskis"/>
+        <input class="w-100" type="text" name="Vards" id="name" oninput="getInputFromTextField(this)" value="Jevgenijs Struņevskis"/>
 
         <h2>Komentārs</h2>
-        <textarea class="w-100" id="coment" onkeydown="getInputFromTextField(this)">Mācāmies lietot ASP.NET tehnoloģijas...</textarea>
+        <textarea class="w-100" id="coment" oninput="getInputFromTextField(this)">Mācāmies lietot ASP.NET tehnoloģijas...</textarea>
         <br />
         <input type="submit" value="Sūtīt">
     </form>
@@ -33,19 +33,19 @@
     <table>
         <tr>
             <td>Kurss:</td>
-            <td class="pl-2" id="course-out">1</td>
+            <td class="pl-2" id="course-out">null</td>
         </tr>
         <tr>
             <td>Studiju programma</td>
-            <td class="pl-2" id="studies-out">IT</td>
+            <td class="pl-2" id="studies-out">null</td>
         </tr>
         <tr>
             <td>Vārds</td>
-            <td class="pl-2" id="name-out">Jevgenijs Struņevskis</td>
+            <td class="pl-2" id="name-out">null</td>
         </tr>
         <tr>
             <td>Komentārs</td>
-            <td class="pl-2" id="coment-out">Mācāmies lietot ASP.NET tehnoloģijas...</td>
+            <td class="pl-2" id="coment-out">null</td>
         </tr>
     </table>
    
@@ -54,15 +54,15 @@
         var n, e;
 
         function getInputFromTextField(element) {
-            n = document.getElementById(element.id).value; // get value
-            e = (element.id) + "-out";
-            document.getElementById(e).innerHTML = n; 
+            n = document.getElementById(element.id).value;  // get value
+            e = (element.id) + "-out";                      // set value
+            document.getElementById(e).innerHTML = n;       // print out value
         }
 
         function getInputFromSelectedOption() {
-            e = document.getElementById("studies");
-            n = e.options[e.selectedIndex].text;
-            document.getElementById('studies-out').innerHTML = n; // write output
+            e = document.getElementById("studies");                 // get value
+            n = e.options[e.selectedIndex].text;                    // set value
+            document.getElementById('studies-out').innerHTML = n;   // print out value
         }
 
         function getInputFromRadio() {
