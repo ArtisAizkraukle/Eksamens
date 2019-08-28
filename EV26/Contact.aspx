@@ -32,21 +32,21 @@
     <h1>Rezultāts</h1>
 
     <table>
-        <tr class="mr-3">
+        <tr>
             <td>Kurss:</td>
-            <td class="mr-3" id="course-out">null</td>
+            <td class="p-3" id="course-out">null</td>
         </tr>
-        <tr class="mr-3 ml-3">
+        <tr>
             <td>Studiju programma</td>
-            <td id="studies-out">null</td>
+            <td class="p-3" id="studies-out">null</td>
         </tr>
         <tr>
             <td>Vārds</td>
-            <td class="pl-2" id="name-out">null</td>
+            <td class="p-3" id="name-out">null</td>
         </tr>
         <tr>
             <td>Komentārs</td>
-            <td class="pl-2" id="coment-out">null</td>
+            <td class="p-3" id="coment-out">null</td>
         </tr>
     </table>
    
